@@ -6,15 +6,8 @@ import styles from '../styles/Home.module.css';
 export default function Home() {
   return (
     <>
-      <PageLayout >
+      <PageLayout title="Tienda Orgánica" icon="/save-the-planet.png">
         <div className={styles.container}>
-
-          {/* CUSTOM HEDEAR PER PAGE */}
-          <Head>
-            <title>Tienda Orgánica - Inicio</title>
-            <meta name="description" content="Developed by brachintosh - Next.js" />
-            <link rel="icon" href="/AlmaZenLogo.png" />
-          </Head>
 
           {/* BODY CONTENT */}
           <main className={styles.main}>

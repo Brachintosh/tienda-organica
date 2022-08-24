@@ -2,19 +2,19 @@ import Head from 'next/head';
 import Link from "next/link";
 import styles from '../styles/Home.module.css';
 
-export default function PageLayout ({ children }) {
+export default function PageLayout ({ children, title = "Tienda Loka", icon = "/AlmaZenLogo.png" }) {
   
   return (
    <>
     {/* DEFAULT HEADER APP */} 
     <Head>
-      <title>AlmaZen - Tienda Orgánica</title>
+      <title>{title}</title>
       <meta name="description" content="Developed by brachintosh - Next.js" />
-      <link rel="icon" href="/AlmaZenLogo.png" />
+      <link rel="icon" href={icon} />
     </Head>
 
     {/* NAVIGATION BAR */}
-    <header>
+    <header style={{hieght: '30px', padding: '20px', color: '#343434'}} >
       <Link href='/'>
            Tienda Orgánica
       </Link>{" "}{"-  "}
@@ -29,7 +29,7 @@ export default function PageLayout ({ children }) {
     </main>
 
     {/* FOOTER */}
-    <footer>
+    <footer style={{hieght: '30px', padding: '20px'}}>
       <span>
         Developed by {" "}
         <a 

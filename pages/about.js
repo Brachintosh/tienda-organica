@@ -1,16 +1,9 @@
-import Head from 'next/head';
 import PageLayout from '../components/PageLayout';
 
 export default function About () {
 
     return <>
-      <PageLayout>
-
-        {/* ABOUT HEADER APP */}
-        <Head>
-            <title>Sobre nosotros</title>
-            <link rel="icon" href="/bio2.png" />
-        </Head>
+      <PageLayout title="Sobre nostoros" icon="/bio2.png" >
 
         <div className='container'>
           <h2>
@@ -27,7 +20,8 @@ export default function About () {
             justify-content: center;
           }
           h2 {
-            margin-top: 2rem;
+            text-decoration: underline;
+            padding-top: 1em;
           }
         `}
         </style>
