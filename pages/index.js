@@ -8,12 +8,12 @@ export default function Home() {
       <Head>
         <title>AlmaZen - Tienda Orgánica</title>
         <meta name="description" content="Developed by brachintosh - Next.js" />
-        <link rel="icon" href="/bio2.png" />
+        <link rel="icon" href="/AlmaZenLogo.png" />
       </Head>
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Bienvenidos a <a href="https://nextjs.org">AlmaZen Tienda Orgánica!</a>
+          Bienvenidos a <a href="https://www.tiendaorganica.com.ar">AlmaZen Tienda Orgánica!</a>
         </h1>
         <p className={styles.description}>
           Website created using Next.js{' '}
