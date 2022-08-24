@@ -1,5 +1,6 @@
 .container {
   padding: 0 2rem;
+  background:fixed;
   background-image: url("https://65935a34dc.clvaw-cdnwnd.com/624984cfd98f1dae0aaccc6b70735c0c/200000001-c44d7c44da/beneficios-verduras-ecologicas.jpg?ph=65935a34dc");
   /* background-image: url("https://d1di2lzuh97fh2.cloudfront.net/files/2c/2cf/2cfa9l.jpg?ph=65935a34dc"); */
 }
