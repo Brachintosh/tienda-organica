@@ -1,8 +1,11 @@
 .container {
   padding: 0 2rem;
+  background-image: url("https://65935a34dc.clvaw-cdnwnd.com/624984cfd98f1dae0aaccc6b70735c0c/200000001-c44d7c44da/beneficios-verduras-ecologicas.jpg?ph=65935a34dc");
 }
 
 .main {
+  color: white;
+  text-shadow: 2px 1.5px #111;
   min-height: 100vh;
   padding: 4rem 0;
   flex: 1;
@@ -13,6 +16,8 @@
 }
 
 .footer {
+  color: white;
+  text-shadow: 2px 1.5px #111;
   display: flex;
   flex: 1;
   padding: 2rem 0;
@@ -20,12 +25,17 @@
   justify-content: center;
   align-items: center;
 }
+.dev {
+  color: #0070f3;
+  text-shadow: none;
+  text-decoration: none;
+}
 
 .dev:hover {
   color: tomato;
 }
 
-.title a, .dev {
+.title a {
   color: #0070f3;
   text-decoration: none;
 }
@@ -54,6 +64,8 @@
 }
 
 .code {
+  color: black;
+  text-shadow: none;
   background: #fafafa;
   border-radius: 5px;
   padding: 0.75rem;
