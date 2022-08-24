@@ -10,14 +10,12 @@ export default function Home() {
         <div className={styles.container}>
 
           {/* BODY CONTENT */}
-          <main className={styles.main}>
-            <h1 className={styles.title}>
-              Bienvenidos a <a href="https://www.tiendaorganica.com.ar">AlmaZen Tienda Orgánica!</a>
+          <main className={styles.homeContent}>
+            
+            <h1 className={styles.homeTitle}>
+              Bienvenido a tú <a href="https://www.tiendaorganica.com.ar">Tienda Orgánica!</a>
             </h1>
-            <p className={styles.description}>
-              Website created using Next.js{' '}
-              <code className={styles.code}>pages/index.js</code>
-            </p>
+
           </main>    
 
         </div>

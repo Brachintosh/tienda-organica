@@ -14,12 +14,15 @@ export default function PageLayout ({ children, title = "Tienda Loka", icon = "/
     </Head>
 
     {/* NAVIGATION BAR */}
-    <header style={{hieght: '30px', padding: '20px', color: '#343434'}} >
+    <header style={{display: 'flex', justifyItems: 'flex-start', justifyContent:'center', alignContent: 'center', border: 'solid #343434 1px', hieght: '30px', padding: '20px',}} >
       <Link href='/'>
-           Tienda Orgánica
-      </Link>{" "}{"-  "}
+        Tienda Orgánica  
+      </Link>{" -  "}
       <Link href='/about'>
-        Sobre nosotros
+        Sobre Nosotros  
+      </Link>{" -  "}
+      <Link href='/contactUs'>
+        Contacto 
       </Link>
     </header>
 
@@ -29,8 +32,17 @@ export default function PageLayout ({ children, title = "Tienda Loka", icon = "/
     </main>
 
     {/* FOOTER */}
-    <footer style={{hieght: '30px', padding: '20px'}}>
+    <footer className={styles.footerBrand} style={{hieght: '30px', padding: '20px'}}>
       <span>
+        Website created using: 
+        <a
+          className={styles.dev}
+          href="https://nextjs.org/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+        {" "}Next.js
+        </a>{" - "}
         Developed by {" "}
         <a 
           className={styles.dev}
@@ -43,6 +55,7 @@ export default function PageLayout ({ children, title = "Tienda Loka", icon = "/
           </b>
         </a>
       </span>
+
     </footer>
 
    </>   
