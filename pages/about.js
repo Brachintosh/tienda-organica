@@ -1,9 +1,11 @@
 import PageLayout from '../components/PageLayout';
 import Link from "next/link";
 import Image from 'next/image';
-import imagenDesk from "/public/AlmaZenLogo.png"
+import brocoli from "/public/brocoli.jpeg"
 import canasta from "/public/canasta.avif"
-// import canasta from "/public/A.jpg"
+import tabla from "/public/tabla.jpeg"
+import logoTienda from "/public/AlmaZenLogo.png"
+// import logoTienda from "/public/logoTiendaOrg.png"
 
 export default function About () {
 
@@ -19,9 +21,9 @@ export default function About () {
             <div className='contentAboutUs-right'>
               <Image 
                 alt="Imagen de verduras"
-                src={imagenDesk}
+                src={brocoli}
                 layout="responsive"
-                height="2em" width="3em"
+                height={6} width={8}
               />
             </div>
             
@@ -43,11 +45,24 @@ export default function About () {
           <div className='imagen-canasto'>
             <Image 
                   alt="Imagen de verduras"
+                  src={tabla}
+                  layout="responsive"
+                  height={0.5} width={1}
+            />
+            <Image 
+                  alt="Imagen de verduras"
+                  src={logoTienda}
+                  layout="responsive"
+                  height={0.5} width={1}
+            />
+            <Image 
+                  alt="Imagen de verduras"
                   src={canasta}
                   layout="responsive"
                   height={0.5} width={1}
             />
           </div>
+
         </div> 
 
         <style jsx>{`
@@ -67,18 +82,24 @@ export default function About () {
           }
           .contentAboutUs-left {
             width: 50vw;
+            margin-top: 2.5em;
             margin-left: 2em;
           }
           .contentAboutUs-right {
             width: 35vw;
             margin: 1em 2em;
+            border-radius: 50%;
           }
 
           .imagen-canasto {
             display: grid;
+            grid-template-columns: 1fr 0.5fr 1fr;
+            grid-gap: 0.5em 1em;
             align-items: center;
             margin-top: 1em;
             padding: 0;
+            // height: 25px;
+            width:100%;
 
           }
 
