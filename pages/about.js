@@ -93,12 +93,12 @@ export default function About () {
 
           .imagen-canasto {
             display: grid;
-            grid-template-columns: 1fr 0.5fr 1fr;
+            grid-template-columns: 1fr 1.5fr 1fr;
             grid-gap: 0.5em 1em;
             align-items: center;
-            margin-top: 1em;
-            padding: 0;
-            // height: 25px;
+            margin-top: 3em;
+            padding-bottom: 1.2em;
+
             width:100%;
 
           }
