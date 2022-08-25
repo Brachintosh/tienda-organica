@@ -14,13 +14,13 @@ export default function PageLayout ({ children, title = "Tienda Loka", icon = "/
     </Head>
 
     {/* NAVIGATION BAR */}
-    <header style={{display: 'flex', justifyItems: 'flex-start', justifyContent:'center', alignContent: 'center', border: 'solid #343434 1px', hieght: '30px', padding: '20px',}} >
+    <header style={{display: 'flex', justifyItems: 'flex-start', justifyContent:'space-around', alignContent: 'center', border: 'solid #343434 1px', hieght: '30px', padding: '20px',}} >
       <Link href='/'>
         Tienda Orgánica  
-      </Link>{" -  "}
+      </Link>
       <Link href='/about'>
         Sobre Nosotros  
-      </Link>{" -  "}
+      </Link>
       <Link href='/contactUs'>
         Contacto 
       </Link>

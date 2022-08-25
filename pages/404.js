@@ -6,9 +6,9 @@ const _404 = () => {
       <PageLayout title="Pagina no encontrada" icon="/bio2.png" >
         <div className='container'>
             <h2>
-                Not found
+                Lo sentimos, la página no existe.
             </h2>
-            <p>loremn ipsum dolorem coneutisur, loremn ipsum dolorem coneutisur, loremn ipsum dolorem coneutisur</p>
+            <h3>No hay nada en este sitio...</h3>
           </div>
           
           <style jsx>{`
