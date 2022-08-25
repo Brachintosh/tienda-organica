@@ -8,7 +8,7 @@ import PageLayout from '../components/PageLayout';
 const contactUs = () => {
   return (
     <>
-      <PageLayout title="Contactános" icon="/bio2.png" >
+      <PageLayout title="Contactános" icon='/logoTiendaOrg.png'>
         <div className='container'>
 
           {/* DESCRIPTION INFO */}

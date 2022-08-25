@@ -18,6 +18,12 @@ export default function PageLayout ({ children, title = "Tienda Loka", icon = "/
       <Link href='/'>
         Tienda Orgánica  
       </Link>
+      <Link href='/bolson'>
+        Bolson
+      </Link>
+      <Link href='/recipes'>
+        Recetas
+      </Link>
       <Link href='/about'>
         Sobre Nosotros  
       </Link>

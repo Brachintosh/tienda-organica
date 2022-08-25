@@ -6,7 +6,7 @@ import styles from '../styles/Home.module.css';
 export default function Home() {
   return (
     <>
-      <PageLayout title="Tienda Orgánica" icon="/save-the-planet.png">
+      <PageLayout title="Tienda Orgánica"  icon='/logoTiendaOrg.png'>
         <div className={styles.container}>
 
           {/* BODY CONTENT */}
