@@ -1,120 +1,110 @@
 import Image from 'next/image';
-// import logoTiendaOrganica from "/public/AlmaZenLogo.png"
-import tomateCherry from "/public/tomateCherry.avif"
-import verdus from "/public/verdus.jpeg"
-import tabla from "/public/tabla.jpeg"
+// import logoTiendaOrganica from "/public/AlmaZenLogo.png";
+// import tabla from "/public/tabla.jpeg";
+import tomateCherry from "/public/tomateCherry.avif";
+import verdus from "/public/verdus.jpeg";
 import PageLayout from '../components/PageLayout';
+import { Box, Grid, Paper, Stack, Typography, } from '@mui/material';
+import SocialIcons from '../molecules/SocialIcons';
 
-const contactUs = () => {
+const ContactUs = () => {
+
   return (
     <>
       <PageLayout title="Contactános" icon='/logoTiendaOrg.png'>
-        <div className='container'>
+        <Box sx={{pb: "5em"}}>
+          {/* TITLE */}
+          <Box sx={{ p: "4em 0", background: `url("https://images.unsplash.com/photo-1474440692490-2e83ae13ba29?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80") no-repeat fixed center`,}}>
+            <Stack direction="row" alignItems="center" justifyContent="space-around">
+              {/* Left */}
+              <Box>
+                <Typography color="#FAFAFA" variant="h3">Contactanos</Typography>
+              </Box>
+              {/* Right */}
+              <Box sx={{ display: { xs: "none", lg: "block" ,} }}>
+                <Box sx={{  minHeight: "15em", minWidth: "15em", border: "solid #DCEDC8 .5px", borderRadius: "12px", display: "flex", justifyContent: "center", alignItems: "center", boxShadow: "2px 3px 6px #fafafa", bgcolor: "#343434", fontWeight: 700,  }}>
+                  <Typography color="#FAFAFA" variant="h6">esta caja puede ser util</Typography>
+                </Box>
+              </Box>
+            </Stack>
+          </Box>
 
-          {/* DESCRIPTION INFO */}
-          <div className="right">
-            <div className='inner'>
-              <h2>
-                Contactanos
-              </h2>
-              <h4>Dir.: Olazábal 2670, Belgrano, CABA, Argentina.</h4>
-              <h4>[imagen del mapa]</h4>
-              <h5>Te.: +54 9 11 3878-3077</h5>
-              <h5>Mail: contacto@tiendaorganica.com.ar</h5>
-              <h5>FB: https://www.facebook.com/almazenorganico/</h5>
-              <h5>IG: https://www.instagram.com/#almazentiendaorganica</h5>
-              
-              <div className="contactForm">
-                <span>FORMULARIO DE CONTACTO...</span>
-                <span>INGRESE NOMBRE...</span>
-                <span>INGRESE SU EMAIL...</span>
-                <span>INGRESE SU MENSAJE...</span>
-                <span>FORMULARIO DE CONTACTO...</span>
-              </div>
-                  
-            </div>
-          </div>  
+          {/* CARD + RIGHT-IMG */}
+          <Stack direction="row" alignItems="center" justifyContent="space-between" pt="3em" m="0 1.5em" spacing={2}>
+            {/* Left */}
+            <Paper elevation={1} sx={{ p: "2.5em 4em",}}>
+              <Box>
+                <Stack direction="column" justifyContent="center" alignItems="center" spacing={4} sx={{ m: 0, p: 0, }} >
+                  <Typography color="#343434" variant="h3">Informacion:</Typography>
+                  <Typography variant="h5" color="#343434">¡Ahora podés programar tu pedido!</Typography>
+                  <Typography variant="body1" color="#343434">Programá tu pedido para todas las semanas, y retíralo por nuestra tienda o te lo llevamos a tu casa.</Typography>
+                  <Typography variant="h3" color="#343434">¡Consultanos!</Typography>
+                </Stack>
+              </Box>
+            </Paper>
+            {/* Right */}
+            <Box sx={{ display: { xs: "none", lg: "block" ,}, mr: "4em", minHeight: "18em", minWidth: "20em", border: "solid green .1px", borderRadius: "8px"}}>
+              <Image alt="Imagen de verduras" src={tomateCherry} layout="responsive" height="2.5em" width="2.7em" /> 
+            </Box>
+          </Stack>    
 
-          {/* next.js image */}
-          <div className="left">
-            <Image 
-              alt="Imagen de verduras"
-              src={tomateCherry}
-              layout="responsive"
-              height="2em" width="3em"
-            />
+          {/* LEFT-IMG + BOX  */}
+          <Stack direction="row" alignItems="center" justifyContent="space-evenly" pt="5em" m="0 1.5em">
+            {/* Left */}
+            <Box sx={{ display: { xs: "none", lg: "block" ,},minHeight: "30em", minWidth: "30em", border: "solid green .1px", borderRadius: "8px"}}>
+              <Image alt="Imagen de verduras" src={verdus} layout="responsive" height="1.5em" width="1.5em" /> 
+            </Box>
+            {/* Right */}
+            <Box>
+              <Stack direction="column" justifyContent="center" alignItems="center" spacing={8} sx={{ border: "solid tomato .1p", p: "3em 1.5em"}}>
+                <Typography color="#343434" variant="h3">Novedades</Typography>
+                <Typography variant="h4" color="#343434">¡Ahora podés programar tu pedido!</Typography>
+                <Typography variant="body1" color="#343434">Programá tu pedido para todas las semanas, y retíralo por nuestra tienda o te lo llevamos a tu casa.</Typography>
+                <Typography variant="h3" color="#343434">¡Consultanos!</Typography>
+              </Stack>
+            </Box>
+          </Stack>  
 
-            <Image 
-              alt="Imagen de verduras"
-              // src={logoTiendaOrganica}
-              src={tabla}
-              layout="responsive"
-              height="2em" width="3em"
-            />
+          {/* SIMPLE STACK */}
+          <Stack direction="row" alignItems="center" justifyContent="center" pt="2em" spacing={12} m="0 1.5em">
+            <Paper elevation={1} sx={{ display: { xs: "none", md: "block" ,}, p: "2.5em 4em", }}>
+              <SocialIcons />
+            </Paper>
+            <Paper elevation={1} sx={{ p: "2.5em 4em", }}>
+              <SocialIcons />
+            </Paper>
+          </Stack>
 
-            <Image 
-              alt="Imagen de verduras"
-              src={verdus}
-              layout="responsive"
-              height="2em" width="3em"
-            />
-          </div>
+          {/* SIMPLE GRID OF LIL'CARDS  */}
+          <Stack direction="column" alignItems="center" justifyContent="center" pt="2em" m="1em 2.5em">
+            <Grid container spacing={4}>
+              <Grid item xs={12} sm={6} lg={3}>
+                <Paper elevation={3} sx={{ p: "2.5em 4em" }}>
+                  <SocialIcons />
+                </Paper>
+              </Grid>
+              <Grid item xs={12} sm={6} lg={3}>
+                <Paper elevation={3} sx={{ p: "2.5em 4em" }}>
+                  <SocialIcons />
+                </Paper>
+              </Grid>
+              <Grid item xs={12} sm={6} lg={3}>
+                <Paper elevation={3} sx={{ p: "2.5em 4em" }}>
+                  <SocialIcons />
+                </Paper>
+              </Grid>
+              <Grid item xs={12} sm={6} lg={3}>
+                <Paper elevation={3} sx={{ p: "2.5em 4em" }}>
+                  <SocialIcons />
+                </Paper>
+              </Grid>
+            </Grid>
+          </Stack>
 
-        </div>
+        </Box>
       </PageLayout>
-
-      <style jsx>{`
-          .container {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            margin: 0;
-            padding: 0;
-            height: 100%;
-          }
-          .inner {
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            justify-items: center;
-          }
-
-          .left {
-            width: 35vw;
-            margin: 1em 2em;
-          }
-          .right {
-            margin: 0;
-            padding: 1em 2em;
-            height: 100%;
-            width: 60vw;
-          }
-
-          .contactForm { 
-            display: grid;
-            justify-self: center;
-            width: 75%;
-            padding: .5em 1em;
-            margin-bottom: 2em;
-          }
-
-          h2 {
-            color: tomato;
-            text-shadow: 2px 1.5px #343434;
-            font-size: 2.5em;
-          }
-          h5 {
-            color: #fa3;
-            text-shadow: 1px .75px #343434;
-            letter-spacing: 1.25px;
-            font-size: 1.25em;
-          }
-        `}
-      </style>
-
     </>
-  )
-}
+  );
+};
 
-export default contactUs;
+export default ContactUs;

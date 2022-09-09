@@ -1,44 +1,24 @@
 import Head from 'next/head';
-import Link from "next/link";
-import styles from '../styles/Home.module.css';
+import NavBar from './NavBar';
+import FooterBrand from './FooterBrand';
+import { Box } from '@mui/material';
 
-export default function PageLayout ({ children, title = "Tienda Loka", icon = "/AlmaZenLogo.png" }) {
-  
+export default function PageLayout({ children, title = "Tienda Loka", icon = "/AlmaZenLogo.png" }) {
+
   return (
-   <>
-    {/* DEFAULT HEADER APP */} 
-    <Head>
-      <title>{title}</title>
-      <meta name="description" content="Developed by brachintosh - Next.js" />
-      <link rel="icon" href={icon} />
-    </Head>
-
-    {/* NAVIGATION BAR */}
-    <header style={{display: 'flex', justifyItems: 'flex-start', justifyContent:'space-around', alignContent: 'center', border: 'solid #343434 1px', hieght: '30px', padding: '20px',}} >
-      <Link href='/'>
-        Tienda Orgánica  
-      </Link>
-      <Link href='/bolson'>
-        Bolson
-      </Link>
-      <Link href='/recipes'>
-        Recetas
-      </Link>
-      <Link href='/about'>
-        Sobre Nosotros  
-      </Link>
-      <Link href='/contactUs'>
-        Contacto 
-      </Link>
-    </header>
-
-    {/* BODY */}
-    <main>
-      {children}
-    </main>
-
-    {/* FOOTER */}
-    <footer className={styles.footerBrand} style={{hieght: '30px', padding: '20px'}}>
+    <>
+      <Head>
+        <title>{title}</title>
+        <meta name="description" content="Developed by brachintosh - Next.js" />
+        <link rel="icon" href={icon} />
+      </Head>
+      <NavBar />
+      {/* BODY */}
+      <main>
+        {children}
+      </main>
+      <FooterBrand />
+      {/* <footer className={styles.footerBrand} style={{hieght: '30px', padding: '20px'}}>
       <span>
         Website created using: 
         <a
@@ -61,9 +41,8 @@ export default function PageLayout ({ children, title = "Tienda Loka", icon = "/
           </b>
         </a>
       </span>
+    </footer> */}
 
-    </footer>
-
-   </>   
+    </>
   )
 };

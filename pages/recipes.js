@@ -2,6 +2,8 @@ import PageLayout from '../components/PageLayout';
 import Image from 'next/image';
 
 const Recetas = ({ results }) => {
+console.log('results :>> ', results);
+
   return (
     <>
       <PageLayout title="Recetas - Tienda Orgánica" icon='/logoTiendaOrg.png'>
@@ -10,15 +12,16 @@ const Recetas = ({ results }) => {
           <h1>RECETAS:</h1>
          
           { results.length === 0 && <p>Loading....</p>}
-          { results.length > 0 && 
-            results.map((item, index) => (
+          { results?.length > 0 && 
+            results?.map((item, index) => (
               <div key={index} className="recipeCard">
-                <h5>- {item.title}</h5>
+                <h5>- {item.title.toString()}</h5>
                 <Image 
                     alt="Imagen de recetas"
-                    src={item.image}
+                    src={item.image.toString()}
                     layout="responsive"
                     height={2} width={4}
+                    // priority={index === 1 ? true : false }
                 />
               </div>
             ))
@@ -27,7 +30,7 @@ const Recetas = ({ results }) => {
 
       </PageLayout>
 
-      <style jx>
+      <style jsx>
         {`
           .recipesContainer {
             padding: 0;
